@@ -1,0 +1,83 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ================================================
+    // USER DOCUMENT
+    // ================================================
+
+    match /users/{userId} {
+
+      allow read, write:
+        if request.auth != null
+        && request.auth.uid == userId;
+
+      // ==============================================
+      // DEVICES
+      // ==============================================
+
+      match /devices/{deviceId} {
+
+        allow read, write:
+          if request.auth != null
+          && request.auth.uid == userId;
+
+        // ============================================
+        // SENSOR READINGS
+        // ============================================
+
+        match /readings/{readingId} {
+
+          // Dashboard users can read their readings.
+          allow read:
+            if request.auth != null
+            && request.auth.uid == userId;
+
+          // Sensor data is written through Cloud Functions.
+          allow write:
+            if false;
+        }
+
+        // ============================================
+        // WATERING EVENTS
+        // ============================================
+
+        match /wateringEvents/{eventId} {
+
+          allow read:
+            if request.auth != null
+            && request.auth.uid == userId;
+
+          allow write:
+            if false;
+        }
+
+        // ============================================
+        // ALERTS
+        // ============================================
+
+        match /alerts/{alertId} {
+
+          allow read:
+            if request.auth != null
+            && request.auth.uid == userId;
+
+          allow write:
+            if false;
+        }
+      }
+    }
+
+    // ================================================
+    // DEVICE REGISTRY
+    // ================================================
+
+    // This collection is server-only.
+    match /deviceRegistry/{deviceId} {
+
+      allow read, write:
+        if false;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+.env
+.env.*
+!.env.example
+
+iot-simulator/.env
+iot-simulator/serviceAccountKey.json
+iot-simulator/venv/
+iot-simulator/__pycache__/
+
+functions/node_modules/
