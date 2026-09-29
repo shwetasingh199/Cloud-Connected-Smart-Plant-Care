@@ -119,8 +119,9 @@ A Python simulator generates realistic sensor data so the complete system can be
 ---
 ## Screenshots
 
-<img width="857" height="770" alt="Screenshot 2026-09-29 191533" src="https://github.com/user-attachments/assets/aebd074c-fadd-4163-959b-9038953a6188" />
+<img width="997" height="815" alt="Screenshot 2026-09-29 201536" src="https://github.com/user-attachments/assets/418e01d3-0de1-4708-a12d-34355a244611" />
 <img width="862" height="802" alt="Screenshot 2026-09-29 191407" src="https://github.com/user-attachments/assets/892c990e-efbd-4e8c-ad41-96fdfdd1f04a" />
+<img width="857" height="770" alt="Screenshot 2026-09-29 191533" src="https://github.com/user-attachments/assets/aebd074c-fadd-4163-959b-9038953a6188" />
 <img width="1822" height="910" alt="Screenshot 2026-09-29 194421" src="https://github.com/user-attachments/assets/0e6053a8-d004-4531-8bfb-35102ab6c6ca" />
 <img width="1857" height="893" alt="Screenshot 2026-09-29 194547" src="https://github.com/user-attachments/assets/bd4cf1e1-4321-4e4e-a1d3-a89619267167" />
 
